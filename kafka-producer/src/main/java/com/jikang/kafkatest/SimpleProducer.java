@@ -12,6 +12,8 @@ public class SimpleProducer {
     private final static Logger LOG = Logger.getGlobal();
     private final static String TOPIC_NAME = "test";
     private final static String BOOTSTRAP_SERVERS = "3.35.19.153:9092";
+    // 파티션 번호를 지정할 수도 하지 않을 수도 있습니다.
+    private final static int PARTITION_NUMBER = 1;
 
     public static void main(String[] args) {
         Properties configs = new Properties();
@@ -24,6 +26,11 @@ public class SimpleProducer {
         for(int index = 0; index < 10; index++){
             String data = "This is record " + index;
             ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, data);
+            //ProducerRecord<> 생성자의 매개변수가 3개일 경우 두 번째 인자는 키값에 해당합니다.
+            //ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, Integer.toString(index), data);
+            //ProducerRecord<> 생성자의 매개변수가 4개일 경우 두 번째 인자는 파티션 번호에 해당합니다.
+            //ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC_NAME, PARTITION_NUMBER, Integer.toString(index), data);
+
             try{
                 producer.send(record);
                 LOG.info("Send to " + TOPIC_NAME + " | data : " + data);
