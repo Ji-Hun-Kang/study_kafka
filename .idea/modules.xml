@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/avro/avro.iml" filepath="$PROJECT_DIR$/avro/avro.iml" />
       <module fileurl="file://$PROJECT_DIR$/kafka-consumer/kafka-consumer.iml" filepath="$PROJECT_DIR$/kafka-consumer/kafka-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/kafka-producer/kafka-producer.iml" filepath="$PROJECT_DIR$/kafka-producer/kafka-producer.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/study_kafka.iml" filepath="$PROJECT_DIR$/.idea/study_kafka.iml" />
