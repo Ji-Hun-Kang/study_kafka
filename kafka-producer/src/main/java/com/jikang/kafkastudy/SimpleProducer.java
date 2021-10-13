@@ -1,4 +1,4 @@
-package com.jikang.kafkatest;
+package com.jikang.kafkastudy;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -40,5 +40,4 @@ public class SimpleProducer {
             }
         }
     }
-
 }
