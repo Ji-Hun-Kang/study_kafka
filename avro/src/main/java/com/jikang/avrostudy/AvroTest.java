@@ -30,7 +30,6 @@ public class AvroTest {
                 .build();
 
         // Serialize user1, user2, and user3 to disk
-
         try {
             DatumWriter<User> userDatumWriter = new SpecificDatumWriter<User>(User.class);
             DataFileWriter<User> dataFileWriter = new DataFileWriter<User>(userDatumWriter);

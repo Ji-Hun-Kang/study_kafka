@@ -30,8 +30,9 @@ public class SimpleConsumer {
         configs.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, BOOTSTRAP_SERVERS);
         configs.put(ConsumerConfig.GROUP_ID_CONFIG, GROUP_ID);
         configs.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        configs.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        configs.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, )
+        //configs.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+        configs.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, AvroDeserializer.class.getName());
+
         // 자동 커밋 옵션 설정, 기본 값은 true
         //configs.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, true);
         configs.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, false);
