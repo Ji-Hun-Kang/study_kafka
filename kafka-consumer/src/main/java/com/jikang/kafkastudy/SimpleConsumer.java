@@ -1,3 +1,4 @@
+/*
 package com.jikang.kafkastudy;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -40,7 +41,8 @@ public class SimpleConsumer {
         //configs.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, 60000);
 
         // 멀티스레드 사용시 하단 내용을 스레드 내에서 선언한다.
-        /*KafkaConsumer<String, String> consumer = new KafkaConsumer<>(configs);
+        */
+/*KafkaConsumer<String, String> consumer = new KafkaConsumer<>(configs);
         consumer.subscribe(Arrays.asList(TOPIC_NAME));
 
         while (true){
@@ -51,7 +53,8 @@ public class SimpleConsumer {
                 consumer.commitSync();
                 record.offset();
             }
-        }*/
+        }*//*
+
 
         // 스레드 실행
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -69,3 +72,4 @@ public class SimpleConsumer {
         }
     }
 }
+*/

@@ -3,6 +3,8 @@ package com.jikang.kafkastudy;
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericData;
 import org.apache.avro.generic.GenericRecord;
+import org.apache.avro.specific.SpecificData;
+import org.apache.avro.specific.SpecificRecord;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -15,7 +17,7 @@ import java.util.logging.Logger;
 public class SimpleProducer {
     private final static Logger LOG = Logger.getGlobal();
     private final static String TOPIC_NAME = "test";
-    private final static String BOOTSTRAP_SERVERS = "3.35.19.153:9092";
+    private final static String BOOTSTRAP_SERVERS = "3.36.58.73:9092";
     // 파티션 번호를 지정할 수도 하지 않을 수도 있습니다.
     private final static int PARTITION_NUMBER = 1;
 
@@ -45,6 +47,7 @@ public class SimpleProducer {
             LOG.warning(e.getMessage());
         }
 
+//        ProducerRecord<String, GenericRecord> record = new ProducerRecord<>(TOPIC_NAME, user1);
         ProducerRecord<String, GenericRecord> record = new ProducerRecord<>(TOPIC_NAME, user1);
 
         //
